@@ -32,7 +32,7 @@ function bishBosh() {
             outDiv.appendChild(liElement);
         }
 
-        else if (i % bishTal === 0) {
+        else if (i % bishTal == 0) {
             // console.log("bish")
 
             liElement.innerHTML = 'Bish';
