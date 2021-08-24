@@ -1,0 +1,42 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+.infotext, .range-pickers{
+    margin: 0 2rem;
+}
+
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-top: 2rem;
+    padding: 0 11rem;
+    
+}
+
+li {
+    border: 1px solid white;
+    font-size: 1.5rem;
+    width: 150px;
+    padding: 2rem 2rem;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: lightblue;
+}

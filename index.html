@@ -5,33 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bish-Bosh</title>
+    <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
     <div class="infotext">
         <h1>Bish-Bosh 2.0</h1>
-        <p>Bish-Bosh listar tal mellan 1 och det du väljer nedan ().</p>
-        <p>Om talet är jämt delbart med ditt valda bish-tal () visas <span style="color: red;">'Bish'</span> istället för talet.</p>
-        <p>Om talet är jämt delbart med ditt valda bosh-tal () visas <span style="color: blue;">'Bosh'</span> istället för talet</p>
-        <p>Om talet är jämt delbart med båda dina tal visas <span style="color: green;">'Bish-Bosh'</span>.</p>
+        <p>
+            Bish-Bosh listar tal mellan 1 och det du väljer nedan (). <br>
+            Om talet är jämt delbart med ditt valda bish-tal () visas <span class="red">'Bish'</span> istället för talet.<br>
+            Om talet är jämt delbart med ditt valda bosh-tal () visas <span class="blue">'Bosh'</span> istället för talet<br>
+            Om talet är jämt delbart med båda dina tal visas <span class="green">'Bish-Bosh'</span>.
+        </p>
     </div>
     
     <form class="range-pickers">
-        <label>Antal nummer: </label>
+        <label for="count">Antal nummer: </label>
         <input oninput="rangeUpdater('lblCount', 'count'); bishBosh();" type="range" id="count" name="count" min="1" max="300" value="1">
         <label for="count" id="lblCount">1</label>
         <br>
 
-        <label>Bish-nummer: </label>
-        <input oninput="rangeUpdater('lblBish', 'bish');" type="range" id="bish" name="bish" min="1" max="50" value="1">
-        <label for="bish-number" id="lblBish">1</label>
+        <label for="bish">Bish-nummer: </label>
+        <input oninput="rangeUpdater('lblBish', 'bish'); bishBosh();" type="range" id="bish" name="bish" min="1" max="50" value="1">
+        <label for="bish" id="lblBish">1</label>
         <br>
 
-        <label>Bosh-nummer: </label>
-        <input oninput="rangeUpdater('lblBosh', 'bosh');" type="range" id="bosh" name="bosh" min="1" max="50" value="1">
-        <label for="count" id="lblBosh">1</label>
+        <label for="bosh">Bosh-nummer: </label>
+        <input oninput="rangeUpdater('lblBosh', 'bosh'); bishBosh();" type="range" id="bosh" name="bosh" min="1" max="50" value="1">
+        <label for="bosh" id="lblBosh">1</label>
     </form>
     
-    <div id="hej"></div>
+    <div id="numberContainer">
+        <ul id="numberList">
+            
+        </ul>
+    </div>
     
     <script src="bish-bosh.js"></script>
 </body>
