@@ -26,14 +26,14 @@
 
         <div class="range-inputs">
             <input class="range" oninput="rangeUpdater('lblCount', 'count'); bishBosh();" type="range" id="count" name="count" min="1" max="300" value="1">
-            <input class="range" oninput="rangeUpdater('lblBish', 'bish'); bishBosh();" type="range" id="bish" name="bish" min="1" max="50" value="1">
-            <input class="range" oninput="rangeUpdater('lblBosh', 'bosh'); bishBosh();" type="range" id="bosh" name="bosh" min="1" max="50" value="1">
+            <input class="range" oninput="rangeUpdater('lblBish', 'bish'); bishBosh();" type="range" id="bish" name="bish" min="0" max="50" value="0">
+            <input class="range" oninput="rangeUpdater('lblBosh', 'bosh'); bishBosh();" type="range" id="bosh" name="bosh" min="0" max="50" value="0">
         </div>
 
         <div class="count-labels">
             <label for="count" id="lblCount">1</label>
-            <label for="bish" id="lblBish">1</label>
-            <label for="bosh" id="lblBosh">1</label>
+            <label for="bish" id="lblBish">0</label>
+            <label for="bosh" id="lblBosh">0</label>
         </div>
     
     </form>
