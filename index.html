@@ -18,27 +18,30 @@
     </div>
     
     <form class="range-pickers">
-        <label for="count">Antal nummer: </label>
-        <input oninput="rangeUpdater('lblCount', 'count'); bishBosh();" type="range" id="count" name="count" min="1" max="300" value="1">
-        <label for="count" id="lblCount">1</label>
-        <br>
-
-        <label for="bish">Bish-nummer: </label>
-        <input oninput="rangeUpdater('lblBish', 'bish'); bishBosh();" type="range" id="bish" name="bish" min="1" max="50" value="1">
-        <label for="bish" id="lblBish">1</label>
-        <br>
-
-        <label for="bosh">Bosh-nummer: </label>
-        <input oninput="rangeUpdater('lblBosh', 'bosh'); bishBosh();" type="range" id="bosh" name="bosh" min="1" max="50" value="1">
-        <label for="bosh" id="lblBosh">1</label>
-
-        <div id="counters">
-            <p>Antal Bish-nummer: <span id="bish-count" class="red counter">0</span></p>
-            <p>Antal Bosh-nummer: <span id="bosh-count" class="blue counter">0</span></p>
-            <p>Antal Bish-Bosh-nummer: <span id="bishbosh-count" class="green counter">0</span></p>
+        <div class="text-labels">
+            <label for="count">Antal nummer: </label>
+            <label for="bish">Bish-nummer: </label>
+            <label for="bosh">Bosh-nummer: </label>
         </div>
-        
+
+        <div class="range-inputs">
+            <input class="range" oninput="rangeUpdater('lblCount', 'count'); bishBosh();" type="range" id="count" name="count" min="1" max="300" value="1">
+            <input class="range" oninput="rangeUpdater('lblBish', 'bish'); bishBosh();" type="range" id="bish" name="bish" min="1" max="50" value="1">
+            <input class="range" oninput="rangeUpdater('lblBosh', 'bosh'); bishBosh();" type="range" id="bosh" name="bosh" min="1" max="50" value="1">
+        </div>
+
+        <div class="count-labels">
+            <label for="count" id="lblCount">1</label>
+            <label for="bish" id="lblBish">1</label>
+            <label for="bosh" id="lblBosh">1</label>
+        </div>
+    
     </form>
+    <div class="counters">
+        <p>Antal Bish-nummer: <span id="bish-count" class="red counter">0</span></p>
+        <p>Antal Bosh-nummer: <span id="bosh-count" class="blue counter">0</span></p>
+        <p>Antal Bish-Bosh-nummer: <span id="bishbosh-count" class="green counter">0</span></p>
+    </div>
     <ul id="bishBoshList"></ul>
     
     <script src="bish-bosh.js"></script>

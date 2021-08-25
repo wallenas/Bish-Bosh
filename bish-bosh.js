@@ -29,7 +29,8 @@ function bishBosh() {
 
     // Clear items
     listParent.innerHTML = '';
-    bishBoshCount.innerHTML, bishCount.innerHTML, boshCount.innerHTML = 0;
+    var counters = [bishBoshCount, bishCount, boshCount];
+    counters.forEach(x => x.innerHTML = '0');
 
     // Main loop
     for (let i = 1; i <= amount; i++) {
