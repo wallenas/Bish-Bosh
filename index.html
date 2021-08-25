@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bish-Bosh</title>
+    <title>Bish-Bosh by Peter Wallenäs</title>
     <link href="style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="infotext">
@@ -13,8 +12,8 @@
         <p>
             Bish-Bosh listar tal mellan 1 och det du väljer nedan (). <br>
             Om talet är jämt delbart med ditt valda bish-tal () visas <span class="red">'Bish'</span> istället för talet.<br>
-            Om talet är jämt delbart med ditt valda bosh-tal () visas <span class="blue">'Bosh'</span> istället för talet<br>
-            Om talet är jämt delbart med båda dina tal visas <span class="green">'Bish-Bosh'</span>.
+            Om talet är jämt delbart med ditt valda bosh-tal () visas <span class="blue">'Bosh'</span> istället för talet.<br>
+            Om talet är jämt delbart med båda dina tal visas <span class="green">'Bish-Bosh'.</span> istället för talet.
         </p>
     </div>
     
@@ -32,13 +31,15 @@
         <label for="bosh">Bosh-nummer: </label>
         <input oninput="rangeUpdater('lblBosh', 'bosh'); bishBosh();" type="range" id="bosh" name="bosh" min="1" max="50" value="1">
         <label for="bosh" id="lblBosh">1</label>
+
+        <div id="counters">
+            <p>Antal Bish-nummer: <span id="bish-count" class="red counter">0</span></p>
+            <p>Antal Bosh-nummer: <span id="bosh-count" class="blue counter">0</span></p>
+            <p>Antal Bish-Bosh-nummer: <span id="bishbosh-count" class="green counter">0</span></p>
+        </div>
+        
     </form>
-    
-    <div id="numberContainer">
-        <ul id="numberList">
-            
-        </ul>
-    </div>
+    <ul id="bishBoshList"></ul>
     
     <script src="bish-bosh.js"></script>
 </body>

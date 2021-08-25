@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: black;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -40,7 +41,7 @@ li {
 }
 
 .blue {
-    color: lightblue;
+    color: lightskyblue;
 }
 
 
@@ -54,6 +55,10 @@ li {
         flex-direction: column;
     }
     
+    .infotext, .range-pickers{
+        margin: 0 4rem;
+    }
+
     ul {
         border: 2px solid black;
         display: flex;
